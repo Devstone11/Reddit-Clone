@@ -4,6 +4,12 @@ app.controller("redditControl", function($scope) {
   $scope.countComments = function(post) {
     return post.comments.length;
   }
+  $scope.upvote = function(post) {
+    post.votes++;
+  }
+  $scope.downvote = function(post) {
+    post.votes--;
+  }
   $scope.posts = [
     {
       title: 'Spiderman',

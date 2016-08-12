@@ -62,8 +62,8 @@
                   <div class="row title">
                     <h2>
                       {{post.title}} |
-                      <span class="glyphicon glyphicon-arrow-up"></span>
-                      <span class="glyphicon glyphicon-arrow-down"></span>
+                      <span class="glyphicon glyphicon-arrow-up" ng-click="upvote(post)"></span>
+                      <span class="glyphicon glyphicon-arrow-down" ng-click="downvote(post)"></span>
                       <span ng-class="{green: post.votes > 0, red: post.votes < 0}">{{post.votes}}</span>
                      </h2>
                   </div>

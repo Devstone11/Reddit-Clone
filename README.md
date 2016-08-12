@@ -12,7 +12,11 @@ Home page:
   - You can re-sort the posts by votes, date, or title.
 
 Upvotes:
-  - If the number is >0, the number is green. If it's =0, it's black. If it's <0, it's red.
+  - clicking the up-arrow increments the vote total by 1. √
+
+  - clicking the down-arrow decreases the vote total by 1. √
+
+  - If the number is >0, the number is green. If it's =0, it's black. If it's <0, it's red. √
 
 Add a Post:
   - Opens a form with Title, Author, Image URL, and Description.

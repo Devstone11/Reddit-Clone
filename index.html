@@ -137,11 +137,25 @@
                     <p class="date col-sm-11">
                       <span class="glyphicon glyphicon-calendar"></span>
                       {{post.date}} |
-                      <span class="glyphicon glyphicon-comment"></span>
-                      {{functions.countComments(post)}} comments |
+                      <a ng-click="functions.displayComments(post)" class="no-color">
+                        <span class="glyphicon glyphicon-comment"></span>
+                        {{functions.countComments(post)}}
+                        <ng-pluralize count="functions.countComments(post)" when="{'one': 'comment', 'other': 'comments'}">
+                        </ng-pluralize>
+                      </a>
+ |
                       <span class="glyphicon glyphicon-pencil"></span>
                       Add Comment
                     </p>
+                  </div>
+                  <div class="row comments" ng-show="post.showComments">
+                    <ul class="col-sm-12">
+                      <li ng-repeat="comment in post.comments | orderBy: sort |filter: post.search">
+                        <p>
+                          <strong>{{comment.author}}</strong> - {{comment.text}}
+                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>

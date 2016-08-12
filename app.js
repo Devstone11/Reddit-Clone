@@ -34,6 +34,9 @@ app.controller("redditControl", function($scope) {
       })
       $scope.newPost = angular.copy(post);
       $scope.postForm.$setPristine();
+    },
+    displayComments: function(post) {
+      post.showComments = post.showComments ? false : true;
     }
   }
   $scope.newPost = {
@@ -54,10 +57,6 @@ app.controller("redditControl", function($scope) {
       description: 'Spider-Man is a fictional superhero appearing in American comic books published by Marvel Comics existing in its shared universe. The character was created by writer-editor Stan Lee and writer-artist Steve Ditko, and first appeared in the anthology comic book Amazing Fantasy #15 (Aug. 1962) in the Silver Age of Comic Books.',
       image: 'https://upload.wikimedia.org/wikipedia/en/0/0c/Spiderman50.jpg',
       comments: [
-        {
-          author: 'web-slingr',
-          text: 'I love spidey!!!!',
-        },
         {
           author: 'george rr martin',
           text: 'i like the part where ben dies',

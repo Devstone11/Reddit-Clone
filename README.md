@@ -36,8 +36,8 @@ Dates:
   - formatted to say today, yesterday, monday, last monday, etc. Needs an external library to work.
 
 Comments:
-  - each post has a link that displays the number of comments, pluralized correctly (1 comment, 2 comments, etc.)
+  - each post has a link that displays the number of comments, pluralized correctly (1 comment, 2 comments, etc.) √
 
-  - When I click on the comments, it toggles showing all comments and their authors.
+  - When I click on the comments, it toggles showing all comments and their authors. √
 
   - When I click "add comment", a form appears with "author" and "text" and an "add comment" button. When I click it, my comment appears with all the others.

@@ -23,3 +23,7 @@ h2 {
   background-color: #FFEBE9;
   border: 2px solid red;
 }
+
+.no-color {
+  color: black;
+}

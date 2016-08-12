@@ -3,6 +3,7 @@ var app = angular.module("redditApp", []);
 app.controller("redditControl", function($scope) {
   $scope.sort = "-votes";
   $scope.showPostForm = false;
+  $scope.submitted = false;
   $scope.functions = {
     countComments: function(post) {
       return post.comments.length;
@@ -18,6 +19,7 @@ app.controller("redditControl", function($scope) {
     },
     displayPostForm: function() {
       $scope.showPostForm = !$scope.showPostForm;
+      $scope.submitted = false;
     },
     submitPost: function(post) {
       $scope.showPostForm = false;

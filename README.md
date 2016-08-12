@@ -19,16 +19,16 @@ Upvotes:
   - If the number is >0, the number is green. If it's =0, it's black. If it's <0, it's red. √
 
 Add a Post:
-  - Opens a form with Title, Author, Image URL, and Description.
+  - Opens a form with Title, Author, Image URL, and Description. √
 
-  - validation - all fields are required. If I try to submit an incomplete form, the empty fields are highlighted red.
+  - validation - all fields are required. If I try to submit an incomplete form, the empty fields are highlighted red. √
 
-  - If I submit a valid post, the form disappears and the new post appears in my list.
+  - If I submit a valid post, the form disappears and the new post appears in my list. √
 
 Search:
-  - searches across all fields in post collection.
+  - searches across all fields in post collection. √
 
-  - As I type in words, it dynamically filters out posts.
+  - As I type in words, it dynamically filters out posts. √
 
   - As posts are filtered in or out, there is animation of them fading out.
 

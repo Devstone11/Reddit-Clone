@@ -59,21 +59,53 @@
         <form class="col-sm-11" ng-submit="functions.submitPost()" name="postForm">
           <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" class="form-control" id="title" placeholder="Title" ng-model="newPost.title">
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="title"
+              placeholder="Title"
+              ng-model="newPost.title"
+              ng-class="{'has-error': postForm.title.$invalid && submitted}"
+              required />
           </div>
           <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" class="form-control" id="author" placeholder="Author" ng-model="newPost.author">
+            <input
+              type="text"
+              class="form-control"
+              id="author"
+              name="author"
+              placeholder="Author"
+              ng-model="newPost.author"
+              ng-class="{'has-error': postForm.author.$invalid && submitted}"
+              required />
           </div>
           <div class="form-group">
             <label for="imageUrl">Image URL</label>
-            <input type="text" class="form-control" id="imageUrl" placeholder="Image URL" ng-model="newPost.image">
+            <input
+              type="text"
+              class="form-control"
+              id="imageUrl"
+              name="image"
+              placeholder="Image URL"
+              ng-model="newPost.image"
+              ng-class="{'has-error': postForm.image.$invalid && submitted}"
+              required />
           </div>
           <div class="form-group">
             <label for="imageUrl">Description</label>
-            <input type="text" class="form-control" id="description" placeholder="Description" ng-model="newPost.description">
+            <input
+              type="text"
+              class="form-control"
+              id="description"
+              name="description"
+              placeholder="Description"
+              ng-model="newPost.description"
+              ng-class="{'has-error': postForm.description.$invalid && submitted}"
+              required />
           </div>
-          <button type="submit" class="btn btn-default">Submit Post</button>
+          <button type="submit" class="btn btn-default" ng-click="submitted= true;">Submit Post</button>
         </form>
       </div>
     </section>

@@ -1,13 +1,13 @@
 Stories of this Angular app:
 
 Home page:
-  - When I view the homepage, I see all posts displayed.
+  - When I view the homepage, I see all posts displayed. √
 
-  - Each post has a Title, a number of upvotes, an author, a date, a description, an image url, a link to comments, and a link to add comments.
+  - Each post has a Title, a number of upvotes, an author, a date, a description, an image url, a link to comments, and a link to add comments. √
 
-  - By default, the posts are ordered on the page by the number of upvotes.
+  - By default, the posts are ordered on the page by the number of upvotes. √
 
-  - On the header, there is a link to submit post, a search box, and a sort-by field.
+  - On the header, there is a link to submit post, a search box, and a sort-by field. √
 
   - You can re-sort the posts by votes, date, or title.
 

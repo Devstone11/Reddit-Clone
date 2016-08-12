@@ -1,7 +1,14 @@
-var app = angular.module("redditApp", ['angularMoment']);
+var app = angular.module("redditApp", ['angularMoment', 'ngAnimate']);
 
 app.controller("redditControl", function($scope) {
   $scope.sort = "-votes";
+  $scope.sortDisplay = function() {
+    var splitSort = $scope.sort.split('');
+    if (splitSort[0] === "-") {
+      splitSort.splice(0,1);
+    }
+    return splitSort.join('');
+  }
   $scope.showPostForm = false;
   $scope.submitted = false;
   $scope.functions = {

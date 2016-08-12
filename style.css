@@ -27,3 +27,19 @@ h2 {
 .no-color {
   color: black;
 }
+
+.ng-enter {
+  animation: fadeInUp .3s;
+}
+
+.ng-leave {
+  animation: fadeOutDown .3s;
+}
+
+.ng-hide-remove {
+  animation: fadeInDown .2s;
+}
+
+.ng-hide-add {
+  animation: fadeOutUp .2s;
+}

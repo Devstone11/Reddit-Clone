@@ -37,6 +37,18 @@ app.controller("redditControl", function($scope) {
     },
     displayComments: function(post) {
       post.showComments = post.showComments ? false : true;
+    },
+    displayCommentForm: function(post) {
+      post.showCommentForm = post.showCommentForm ? false : true;
+    },
+    addComment: function(post) {
+      post.showCommentForm = false;
+      post.comments.push({
+        author: post.newComment.commentAuthor,
+        text: post.newComment.commentText
+      });
+      post.newComment = angular.copy(post);
+      post.commentForm.$setPristine();
     }
   }
   $scope.newPost = {

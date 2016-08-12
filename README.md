@@ -40,4 +40,4 @@ Comments:
 
   - When I click on the comments, it toggles showing all comments and their authors. √
 
-  - When I click "add comment", a form appears with "author" and "text" and an "add comment" button. When I click it, my comment appears with all the others.
+  - When I click "add comment", a form appears with "author" and "text" and an "add comment" button. When I click the button, my comment appears with all the others. √

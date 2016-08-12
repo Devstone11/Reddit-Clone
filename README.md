@@ -33,7 +33,7 @@ Search:
   - As posts are filtered in or out, there is animation of them fading out.
 
 Dates:
-  - formatted to say today, yesterday, monday, last monday, etc. Needs an external library to work.
+  - formatted to say today, yesterday, monday, last monday, etc. Needs an external library to work. √
 
 Comments:
   - each post has a link that displays the number of comments, pluralized correctly (1 comment, 2 comments, etc.) √

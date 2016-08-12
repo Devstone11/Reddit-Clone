@@ -1,7 +1,7 @@
 var app = angular.module("redditApp", []);
 
 app.controller("redditControl", function($scope) {
-  $scope.filter = "-date";
+  $scope.sort = "-votes";
   $scope.functions = {
     countComments: function(post) {
       return post.comments.length;
@@ -12,8 +12,8 @@ app.controller("redditControl", function($scope) {
     downvote: function(post) {
       post.votes--;
     },
-    setFilter: function(filt) {
-      $scope.filter = filt;
+    setSort: function(filt) {
+      $scope.sort = filt;
     }
   }
   $scope.posts = [

@@ -9,7 +9,7 @@ Home page:
 
   - On the header, there is a link to submit post, a search box, and a sort-by field. √
 
-  - You can re-sort the posts by votes, date, or title.
+  - You can re-sort the posts by votes, date, or title. √
 
 Upvotes:
   - clicking the up-arrow increments the vote total by 1. √

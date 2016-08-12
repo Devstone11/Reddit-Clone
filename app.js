@@ -1,14 +1,20 @@
 var app = angular.module("redditApp", []);
 
 app.controller("redditControl", function($scope) {
-  $scope.countComments = function(post) {
-    return post.comments.length;
-  }
-  $scope.upvote = function(post) {
-    post.votes++;
-  }
-  $scope.downvote = function(post) {
-    post.votes--;
+  $scope.filter = "-date";
+  $scope.functions = {
+    countComments: function(post) {
+      return post.comments.length;
+    },
+    upvote: function(post) {
+      post.votes++;
+    },
+    downvote: function(post) {
+      post.votes--;
+    },
+    setFilter: function(filt) {
+      $scope.filter = filt;
+    }
   }
   $scope.posts = [
     {

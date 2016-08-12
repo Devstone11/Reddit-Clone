@@ -66,7 +66,7 @@
               name="title"
               placeholder="Title"
               ng-model="newPost.title"
-              ng-class="{'has-error': postForm.title.$invalid && submitted}"
+              ng-class="{'has-error': postForm.title.$invalid && postSubmitted}"
               required />
           </div>
           <div class="form-group">
@@ -78,7 +78,7 @@
               name="author"
               placeholder="Author"
               ng-model="newPost.author"
-              ng-class="{'has-error': postForm.author.$invalid && submitted}"
+              ng-class="{'has-error': postForm.author.$invalid && postSubmitted}"
               required />
           </div>
           <div class="form-group">
@@ -90,7 +90,7 @@
               name="image"
               placeholder="Image URL"
               ng-model="newPost.image"
-              ng-class="{'has-error': postForm.image.$invalid && submitted}"
+              ng-class="{'has-error': postForm.image.$invalid && postSubmitted}"
               required />
           </div>
           <div class="form-group">
@@ -102,10 +102,15 @@
               name="description"
               placeholder="Description"
               ng-model="newPost.description"
-              ng-class="{'has-error': postForm.description.$invalid && submitted}"
+              ng-class="{'has-error': postForm.description.$invalid && postSubmitted}"
               required />
           </div>
-          <button type="submit" class="btn btn-default" ng-click="submitted= true;">Submit Post</button>
+          <button
+            type="submit"
+            class="btn btn-default"
+            ng-click="postSubmitted= true;">
+            Submit Post
+          </button>
         </form>
       </div>
     </section>
@@ -163,7 +168,7 @@
                   </div>
 
                   <!-- Add-comment form -->
-                  <form class="form-inline" ng-show="post.showCommentForm" ng-submit="functions.addComment(post)">
+                  <form class="form-inline" ng-show="post.showCommentForm" ng-submit="functions.addComment(post)" name="commentForm">
                     <div class="form-group">
                       <label for="commentAuthor">Author</label>
                       <input
@@ -172,6 +177,7 @@
                         id="commentAuthor"
                         name="commentAuthor"
                         ng-model="post.newComment.commentAuthor"
+                        ng-class="{'has-error': commentForm.commentAuthor.$invalid && post.commentSubmitted}"
                         placeholder="username"
                         required />
                     </div>
@@ -183,12 +189,14 @@
                         id="commentText"
                         name="commentText"
                         ng-model="post.newComment.commentText"
+                        ng-class="{'has-error': commentForm.commentText.$invalid && post.commentSubmitted}"
                         placeholder="comment text"
                         required />
                     </div>
                     <button
                       type="submit"
-                      class="btn btn-default">
+                      class="btn btn-default"
+                      ng-click="post.commentSubmitted= true;">
                       Add Comment
                     </button>
                   </form>

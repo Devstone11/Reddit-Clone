@@ -19,7 +19,7 @@ app.controller("redditControl", function($scope) {
     },
     displayPostForm: function() {
       $scope.showPostForm = !$scope.showPostForm;
-      $scope.submitted = false;
+      $scope.postSubmitted = false;
     },
     submitPost: function(post) {
       $scope.showPostForm = false;
@@ -40,6 +40,7 @@ app.controller("redditControl", function($scope) {
     },
     displayCommentForm: function(post) {
       post.showCommentForm = post.showCommentForm ? false : true;
+      post.commentSubmitted = false;
     },
     addComment: function(post) {
       post.showCommentForm = false;

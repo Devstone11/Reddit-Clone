@@ -13,3 +13,8 @@ h2 {
 .red {
   color: red;
 }
+
+#addPostForm {
+  margin-left: 25px;
+  margin-bottom: 15px;
+}

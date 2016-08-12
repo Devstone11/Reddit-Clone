@@ -2,6 +2,7 @@ var app = angular.module("redditApp", []);
 
 app.controller("redditControl", function($scope) {
   $scope.sort = "-votes";
+  $scope.showPostForm = false;
   $scope.functions = {
     countComments: function(post) {
       return post.comments.length;
@@ -14,7 +15,33 @@ app.controller("redditControl", function($scope) {
     },
     setSort: function(filt) {
       $scope.sort = filt;
+    },
+    displayPostForm: function() {
+      $scope.showPostForm = !$scope.showPostForm;
+    },
+    submitPost: function(post) {
+      $scope.showPostForm = false;
+      $scope.posts.push({
+        title: $scope.newPost.title,
+        votes: 0,
+        author: $scope.newPost.author,
+        date: new Date(),
+        description: $scope.newPost.description,
+        image: $scope.newPost.image,
+        comments: []
+      })
+      $scope.newPost = angular.copy(post);
+      $scope.postForm.$setPristine();
     }
+  }
+  $scope.newPost = {
+    title: 'Rorschach',
+    votes: 0,
+    author: 'Watchman',
+    date: new Date(),
+    description: "Rorschach (born Walter Joseph Kovacs) is a fictional character and an antihero of the acclaimed 1986 graphic novel miniseries Watchmen, published by DC Comics. Rorschach was created by writer Alan Moore with artist Dave Gibbons, but as with most of the main characters in the series, he was an analogue for a Charlton Comics character, in this case Steve Ditko's the Question and Mr. A.",
+    image: "https://upload.wikimedia.org/wikipedia/en/b/be/Rorschach.png",
+    comments: []
   }
   $scope.posts = [
     {

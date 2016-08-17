@@ -51,14 +51,14 @@
                 role="button"
                 aria-haspopup="true"
                 aria-expanded="false">
-                Sort By {{sortDisplay()}}
+                Sort By {{sort}}
                 <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                 <!-- <li ng-click="functions.setFilter('-votes')"><a href="#">votes</a></li> -->
-                <li><a href="#" ng-click="functions.setSort('-votes')">votes</a></li>
-                <li><a href="#" ng-click="functions.setSort('-date')">date</a></li>
-                <li><a href="#" ng-click="functions.setSort('title')">title</a></li>
+                <li><a href="#" ng-click="sort ='votes'">votes</a></li>
+                <li><a href="#" ng-click="sort='date'">date</a></li>
+                <li><a href="#" ng-click="sort='title'">title</a></li>
               </ul>
             </li>
           </ul>
@@ -131,7 +131,7 @@
     <!-- main display -->
     <main class="container-fluid">
       <ul>
-        <li ng-repeat="post in posts | orderBy: sort |filter: post.search">
+        <li ng-repeat="post in posts | orderBy: sort : ['-date', 'title', '-votes'] |filter: post.search">
           <div class="row post">
             <div class="well well-sm col-sm-11">
               <div class="row inner-post">
@@ -223,4 +223,5 @@
 
   </body>
   <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="posts_service.js"></script>
 </html>

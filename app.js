@@ -1,7 +1,7 @@
 var app = angular.module("redditApp", ['angularMoment', 'ngAnimate']);
 
 app.controller("redditControl", function($scope) {
-  $scope.sort = "-votes";
+  $scope.sort = "votes";
   $scope.sortDisplay = function() {
     var splitSort = $scope.sort.split('');
     if (splitSort[0] === "-") {
@@ -30,16 +30,11 @@ app.controller("redditControl", function($scope) {
     },
     submitPost: function(post) {
       $scope.showPostForm = false;
-      $scope.posts.push({
-        title: $scope.newPost.title,
-        votes: 0,
-        author: $scope.newPost.author,
-        date: new Date(),
-        description: $scope.newPost.description,
-        image: $scope.newPost.image,
-        comments: []
-      })
-      $scope.newPost = angular.copy(post);
+      $scope.newPost.votes = 0;
+      $scope.newPost.comments = [];
+      $scope.newPost.date = new Date();
+      $scope.posts.push($scope.newPost);
+      $scope.newPost = angular.copy(post)
       $scope.postForm.$setPristine();
     },
     displayComments: function(post) {
